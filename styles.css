@@ -1,0 +1,592 @@
+/* ================== GLOBAL CSS STARTS ================== */
+:root {
+	--color-primary: #dc143b;
+	--color-primary-variant: #000000;
+	--color-bg-one: #f5f5f5;
+	--color-light: #dedfd9;
+	--color-gray: #a8a4a3;
+	--color-white: #f5f5f5;
+	--color-black: #000000;
+	--container-width: 80%;
+	--transition: all 0.3s ease-in-out;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 0;
+	outline: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: var(--color-bg-one);
+	line-height: 1.8;
+	overflow-x: hidden;
+}
+
+h1,
+h2 {
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 3.8rem;
+	color: var(--color-white);
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2.6rem;
+	color: var(--color-black);
+}
+
+a {
+	color: var(--color-gray);
+	transition: var(--transition);
+}
+
+a:hover {
+	color: var(--color-primary);
+}
+
+.container {
+	width: var(--container-width);
+	margin: auto;
+	max-width: 2160px;
+}
+
+img {
+	width: 100%;
+	display: block;
+	object-fit: cover;
+}
+/* ================== GLOBAL CSS ENDED ================== */
+
+/* ================== NAVBAR CSS STARTED ================== */
+nav {
+	width: 100vw;
+	height: calc(16px * 4.3);
+	background-color: var(--color-primary-variant);
+	display: grid;
+	place-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+nav .nav-container {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-logo {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.nav-logo h2,
+.foot-logo h2 {
+	transition: var(--transition);
+	line-height: 0.8;
+	font-size: 2.5rem;
+}
+
+.nav-logo h2 a,
+.foot-logo h2 a {
+	color: var(--color-white);
+	font-size: 1.4rem;
+}
+
+.nav-logo:hover a,
+.foot-logo:hover a {
+	color: var(--color-primary);
+}
+
+.nav-logo h2 a span,
+.foot-logo h2 a span {
+	color: var(--color-primary);
+}
+
+.nav-logo:hover a span,
+.foot-logo:hover a span {
+	color: var(--color-white);
+}
+
+.nav-logo a .tagline {
+	color: var(--color-gray) !important;
+	font-size: calc(16px - 4px);
+}
+
+.nav-links ul {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 1rem;
+}
+
+.nav-links ul li:first-child a {
+	color: var(--color-primary) !important;
+}
+
+.nav-links ul li a {
+	color: var(--color-light) !important;
+	text-transform: uppercase;
+	font-size: calc(16px - 4px);
+	font-weight: 500;
+}
+
+.nav-links ul li a:hover {
+	color: var(--color-primary) !important;
+}
+
+.offer-bar {
+	/* margin-top: calc(16px * 4.3); */
+	background-color: var(--color-primary);
+	text-align: center;
+	width: 100vw;
+	font-size: 0.7rem;
+	color: var(--color-light);
+	font-weight: 500;
+	letter-spacing: 1.2px;
+	padding: 5px;
+}
+
+.offer-bar span {
+	color: var(--color-black);
+	font-weight: 700;
+}
+/* ================== NAVBAR CSS ENDED ================== */
+
+/* ================== HEADER CSS STARTS ================== */
+header {
+	height: calc(100vh - 18vh);
+	/* height: 100vh; */
+	background: url(images/bg-image-one.jpg) no-repeat 10% 38% / cover fixed;
+}
+
+.header-container {
+	margin-top: calc(16px * 5);
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	align-items: center;
+}
+
+.header-contents {
+	margin-right: 62%;
+}
+
+.header-contents h2:first-child {
+	color: var(--color-primary);
+	border-bottom: 1px solid var(--color-primary);
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
+
+.header-contents :nth-child(3) {
+	color: var(--color-white);
+	text-transform: uppercase;
+	font-size: 1.5rem;
+}
+
+.header-contents :nth-child(4) {
+	color: var(--color-white);
+	font-size: 0.8rem;
+	text-align: justify;
+	word-spacing: -1px;
+	line-height: 1.2;
+	margin: 0.6rem 7.4rem 0.6rem 0;
+	font-weight: 500;
+}
+
+.header-contents a {
+	color: var(--color-primary);
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 2px solid var(--color-primary);
+	padding: 5px 25px;
+	margin: 40px 0;
+	display: inline-block;
+}
+
+.header-contents a:hover {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	border: 2px solid var(--color-light);
+}
+
+.header-contents a:active {
+	border: 5px solid var(--color-gray);
+}
+/* ================== HEADER CSS ENDED ================== */
+
+/* ================== SUBSCRIBER CSS STARTS ================== */
+.subscriber-count-bar {
+	height: 30rem;
+	display: flex;
+	place-items: center;
+	width: 100vw;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+}
+
+.subscriber-count-container {
+	display: flex;
+	background: var(--color-primary);
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+	padding: 4.1rem 0;
+	border-radius: 1rem;
+}
+
+.subscriber-count-bar h2,
+.subscriber-count-bar p {
+	color: var(--color-white);
+}
+
+.subscriber-count-bar h2 {
+	font-size: 2.8rem;
+}
+
+.subscriber-count-bar p {
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+/* ================== SUBSCRIBER CSS ENDED ================== */
+
+/* ================== COLLECTION CSS STARTS ================== */
+.collection h2 {
+	margin-bottom: 1.4rem;
+}
+
+.collection .collection-links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.collection .collection-links a {
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.collection .collection-links li {
+	line-height: 1.4;
+}
+
+.collection ul div li:first-child a {
+	color: var(--color-primary);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+/* ================== COLLECTION CSS ENDED ================== */
+
+/* ================== ABOUT STARTS ================== */
+.about {
+	padding: 5rem 0;
+	height: 70rem;
+	position: relative;
+}
+
+.about .model-one {
+	position: absolute;
+	bottom: 5rem;
+	left: 0;
+	width: 50%;
+	height: 50rem;
+	border-radius: 0 1.4rem 1.4rem 0;
+}
+
+.about .model-two {
+	position: absolute;
+	top: 5rem;
+	right: 0;
+	width: 58%;
+	height: 38rem;
+	border-radius: 1.4rem 0 0 1.4rem;
+}
+
+.about .about-container {
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.about-content {
+	width: 40%;
+	padding-left: 5rem;
+}
+
+.about-content p,
+.contact p {
+	font-weight: 500;
+	color: var(--color-black);
+	text-align: justify;
+	line-height: 1.5;
+	margin: 10px 0;
+}
+
+.about a,
+.contact a {
+	color: var(--color-black);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 2px solid var(--color-black);
+	padding: 5px 25px;
+	margin: 10px 0;
+	display: inline-block;
+	transition: var(--transition);
+}
+
+.about a:hover,
+.contact a:hover {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	border: 2px solid var(--color-primary);
+}
+
+.about a:active,
+.contact a:active {
+	border: 5px solid var(--color-gray);
+}
+/* ================== ABOUT CSS ENDED ================== */
+
+/* ================== BROWSE ITEMS STARTS ================== */
+.browse-items {
+	padding: 3rem 0;
+}
+
+.browse-items .shop-cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 2.5rem;
+	grid-row-gap: 4rem;
+	place-items: center;
+	place-content: center;
+}
+
+.browse-items h2 {
+	margin: 3rem 0;
+}
+
+.browse-items .card-details {
+	place-items: center;
+	display: grid;
+}
+
+.browse-items .card-details p {
+	font-size: 0.7rem;
+	text-align: justify;
+	color: var(--color-primary);
+	word-spacing: -1px;
+	line-height: 1.1;
+	margin-bottom: 8px;
+}
+
+.browse-items .card-details h3 {
+	margin: 8px 0;
+}
+
+.browse-items .card-details a {
+	color: var(--color-black);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 2px solid var(--color-black);
+	padding: 5px 25px;
+	margin: 8px 0;
+	display: inline-block;
+	transition: var(--transition);
+}
+
+.browse-items .card {
+	box-shadow: 0 0 0.7rem #e2e1e1;
+	padding: 0.9rem;
+	border-radius: 0.4rem;
+	cursor: default;
+}
+
+.card-image {
+	overflow: hidden;
+	border-radius: 0.4rem;
+}
+
+.browse-items .card img {
+	transition: var(--transition);
+	height: 13rem;
+}
+
+.browse-items .card:hover img {
+	transform: scale(1.2);
+}
+
+.browse-items .card:hover h3 {
+	color: var(--color-primary);
+}
+
+.browse-items .card:hover a {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	border: 2px solid var(--color-primary);
+}
+
+.browse-items .card a:active {
+	border: 5px solid var(--color-gray);
+}
+/* ================== BROWSE ITEMS ENDED ================== */
+
+/* ================== CONTACT STARTS ================== */
+.contact {
+	padding: 3rem 0;
+	height: 70rem;
+	position: relative;
+}
+
+.contact .model-one {
+	position: absolute;
+	bottom: 5rem;
+	right: 0;
+	width: 50%;
+	height: 50rem;
+	border-radius: 1.4rem 0 0 1.4rem;
+}
+
+.contact .model-two {
+	position: absolute;
+	top: 5rem;
+	left: 0;
+	width: 58%;
+	height: 38rem;
+	border-radius: 0 1.4rem 1.4rem 0;
+	z-index: 1;
+}
+
+.contact .contact-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.contact-content {
+	width: 40%;
+	padding-right: 5rem;
+}
+/* ================== CONTACT	ENDED ================== */
+
+/* ================== NEWSLETTER STARS ================== */
+.newsletter {
+	height: 30rem;
+	width: 100vw;
+	display: flex;
+}
+
+.newsletter-container {
+	background: var(--color-primary);
+	padding: 4.1rem 0;
+	border-radius: 1rem;
+}
+
+.newsletter h2 {
+	font-size: 1.5rem;
+	color: var(--color-white);
+	text-align: center;
+}
+
+.newsletter .form-sec {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.newsletter .form-sec input[type='email'] {
+	padding: 10px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	width: 20rem;
+	margin-right: 20px;
+	border-radius: 5px;
+	transition: var(--transition);
+}
+
+.newsletter .form-sec input[type='email']:focus {
+	border: 2px solid var(--color-primary-variant);
+}
+
+.newsletter .form-sec input[type='submit'] {
+	padding: 10px 20px;
+	font-size: 0.9rem;
+	font-weight: 700;
+	border-radius: 5px;
+	text-transform: uppercase;
+	color: var(--color-white);
+	background-color: var(--color-primary-variant);
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+.newsletter .form-sec input[type='submit']:hover {
+	color: var(--color-primary-variant);
+	background-color: var(--color-light);
+}
+/* ================== NEWSLETTER ENDED ================== */
+
+/* ================== FOOTER STARTS ================== */
+footer {
+	height: 22rem;
+	width: 100vw;
+	display: flex;
+	background-color: var(--color-primary-variant);
+	place-content: center;
+	place-items: center;
+}
+
+footer .foot-logo {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+footer p {
+	color: var(--color-white);
+}
+
+footer a {
+	color: var(--color-white);
+}
+
+footer .social {
+	display: flex;
+	place-content: center;
+}
+
+footer .social a {
+	margin: 0 5px;
+	color: var(--color-white);
+}
+
+footer .social a:hover {
+	margin: 0 5px;
+	color: var(--color-primary);
+}
+/* ================== FOOTER ENDED ================== */
